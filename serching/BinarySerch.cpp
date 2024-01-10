@@ -30,7 +30,7 @@ int main()
      
    int arr[6]={5,6,23,30,34,40};
    int arr1[5]={3,5,6,50,54};
-
+   
    int index=BinarySerch(arr,6,30);
    cout<<"the key is present at index :"<<index<<"\n";
 

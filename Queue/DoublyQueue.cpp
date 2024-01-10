@@ -1,3 +1,4 @@
+//this is double ended queue
 #include <iostream>
 using namespace std;
 
