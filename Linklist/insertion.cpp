@@ -1,32 +1,3 @@
-
-/*
-#include<iostream>
-using namespace std;
-
-class Node{
-    public:
-    int data;
-    Node *next;
-
-    //constructer
-    Node(int data)
-    {
-        this->data=data;
-        this->next=NULL;
-
-    }
-};
-
-struct Node * insertatfrist(struct Node * ptr,int value)
-{
-    ptr->data=value;
-    ptr->next =head;
-
-}
-int main()
-{
-  struct Node *head=(struct Node *)malloc(sizeof(struct Node));
-}*/
 #include<iostream>
 using namespace std;
 
@@ -42,9 +13,9 @@ void linklistTravels(struct Node* ptr) {
     }
 }
 
-void insertatfirst(struct Node*& head, int newData) {
+void insertatfirst(struct Node*& head, int value) {
     struct Node* newNode = new Node;
-    newNode->data = newData;
+    newNode->data = value;
     newNode->next = head;
     head = newNode;
 }
@@ -65,13 +36,13 @@ int main() {
     third->data = 78;
     third->next = nullptr;
 
-    cout << "Linked list before insertion at the beginning:\n";
+    cout << "Linked list before insertion:\n";
     linklistTravels(head);
 
     // Inserting a node at the beginning
     insertatfirst(head, 3);
 
-    cout << "\nLinked list after insertion at the beginning:\n";
+    cout << "\nLinked list after insertion:\n";
     linklistTravels(head);
 
     return 0;
