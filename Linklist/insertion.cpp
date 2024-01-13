@@ -22,16 +22,20 @@ void insertatfirst(struct Node*& head, int value) {
 }
 
 // by this function we can insert in between of linklist
-void insertatbetween(struct Node* prevNode, int value) {
-    if (prevNode == nullptr) {
+void insertatbetween(struct Node* p, int value,int index) {
+    if (p == nullptr) {
         cout << "Previous node cannot be null.\n";
         return;
     }
-
-    struct Node* newNode = new Node;
-    newNode->data = value;
-    newNode->next = prevNode->next;
-    prevNode->next = newNode;
+    int i=1;
+      while(i!=index-1)
+      {
+        p=p->next;
+      }
+    struct Node* newnode= new Node;
+    newnode->data = value;
+    newnode->next = p->next;
+    p->next = newnode;
 }
 
 //by this function we can inser at end
@@ -75,17 +79,20 @@ int main() {
     linklistTravels(head);
 
     // call insertion function
-    insertatfirst(head, 3);
+    //insertatfirst(head, 3);
     
     //call insertatbetween
-    insertatbetween(head,78);
-
-    //call insertatend
-    insertatend(head,60);
-
-    
+    insertatbetween(head,38,2);
     cout << "\nLinked list after insertion:\n";
     linklistTravels(head);
+     insertatbetween(head,14,3);
+     cout<<"\n";
+      linklistTravels(head);
+
+    //call insertatend
+   //insertatend(head,60);
+
+    
 
 
     return 0;
