@@ -13,6 +13,9 @@
 // this is stack headerfile
 #include <stack>
 
+//this prirory queue header file
+#include<queue>
+
 using namespace std;
 
 int main()
@@ -163,5 +166,39 @@ int main()
     cout << "size of stact" << s.size() << "\n";
     cout << "Empty or not" << s.empty() << "\n";
 
-    return 0;
+    //priority queue explantion
+    
+    priority_queue<int> maxi;
+
+    priority_queue<int, vector<int>,greater<int> > mini;
+
+  maxi.push(1);
+  maxi.push(2);
+  maxi.push(3);
+  maxi.push(4);
+
+  int n=maxi.size();
+  for(int i=0;i<n;i++)
+  {
+    cout<<maxi.top()<<" ";
+    maxi.pop();
+  }cout<<"\n";
+
+  mini.push(1);
+  mini.push(2);
+  mini.push(3);
+  mini.push(4);
+
+  int n=mini.size();
+  for(int i=0;i<n;i++){
+    cout<<mini.top()<<" ";
+    mini.pop();
+
+  }cout<<"\n";
+
+  cout<< "maxi is empty or not "<<maxi.empty()<<"\n";
+  cout<< "mini is empty or not "<<mini.empty()<<"\n";
+
+
+    return 0; 
 }
