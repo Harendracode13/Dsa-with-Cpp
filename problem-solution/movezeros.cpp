@@ -12,6 +12,7 @@ using namespace std;
 vector<int> moveZeros(vector<int> v)
 {
     int i=0;
+    //This is loop for move zeros
     for(int j=0;j<v.size();j++)
     {
         if(v[j]!=0)
